@@ -18,6 +18,7 @@ public class TodoDto {
     private String title;
     private String memo;
     private boolean important;
+    private boolean complete;
     private LocalDateTime createdDate;
     private LocalDateTime lastModifiedDate;
 }

@@ -37,6 +37,9 @@ public class Todo {
     @Column
     private boolean important;
 
+    @Column
+    private boolean complete;
+
     @CreatedDate
     private LocalDateTime createdDate;
 
@@ -47,5 +50,6 @@ public class Todo {
         if(dto.getTitle() != null) this.title = dto.getTitle();
         if(dto.getMemo() != null) this.memo = dto.getMemo();
         if(dto.isImportant() != this.important) this.important = dto.isImportant();
+        if(dto.isComplete() != this.complete) this.complete = dto.isComplete();
     }
 }

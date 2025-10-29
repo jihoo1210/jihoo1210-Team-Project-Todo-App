@@ -53,6 +53,7 @@ public class TodoService {
                 .title(created.getTitle())
                 .memo(created.getMemo())
                 .important(created.isImportant())
+                .complete(false)
                 .createdDate(created.getCreatedDate())
                 .lastModifiedDate(created.getLastModifiedDate())
                 .build();
@@ -71,6 +72,7 @@ public class TodoService {
                 .title(target.getTitle())
                 .memo(target.getMemo())
                 .important(target.isImportant())
+                .complete(target.isComplete())
                 .createdDate(target.getCreatedDate())
                 .lastModifiedDate(target.getLastModifiedDate())
                 .build();
