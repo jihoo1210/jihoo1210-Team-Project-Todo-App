@@ -34,6 +34,9 @@ export const call = async (api, method, request) => {
             // 403 에러는 로그인 페이지로 이동
             if (error.response && error.response.status === 403) {
                 console.log("403 에러 입니다.", data?.error);
+
+                sessionStorage.removeItem(ACCESS_TOKEN);
+                
                 alert("로그인이 필요합니다.");
                 setTimeout(() => {
                     window.location.href = "/login";
